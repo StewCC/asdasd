@@ -1,0 +1,53 @@
+const Discord = require("discord.js");
+const Database = require("@replit/database")
+const db = new Database()
+
+module.exports = {
+    info: {
+        name: "server",
+        description: "[ Staff Only ] Create a quick server.",
+        usage: "[guild name]",
+        aliases: ['servermake', 'makeserver', 'guildm', 'mguild']
+    },
+
+    run: async function(client, message, args){
+        //Command execute starts from here
+  message.delete();
+
+let ownerServ = db.get(`${message.guild.id}_own`);
+
+  if(!message.member.hasPermission("MANAGE_MESSAGES")) 
+  if(ownerServ !== message.author.id) {
+  return message.channel.send("Insufficient Permissions");   
+  }
+  
+if(args[0] === 'del') {
+  if(message.guild.id !== '793763569174052904') {
+  db.delete(`${message.guild.id}_own`);
+  return message.guild.delete();
+  } else{
+    return
+  }
+}
+
+if(!args[0]){
+  return message.channel.send('Name when?')
+}
+
+        const newServer = await client.guilds.create(args[0], {
+            channels: [
+                {"name": "general"},
+            ]
+        });
+
+  let invite = newServer.channels.cache.find(chn => chn.name == 'general');
+
+  let serverInv = await invite.createInvite();
+
+db.set(`${newServer.id}_own`, `${message.author.id}`)
+
+
+  message.channel.send(`${serverInv}`)
+
+    }
+}

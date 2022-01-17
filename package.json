@@ -1,0 +1,26 @@
+{
+  "name": "yes",
+  "version": "1.0.0",
+  "description": "Discord Bot",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "^C"
+  },
+  "keywords": [
+    "stop"
+  ],
+  "author": "pls",
+  "license": "ISC",
+  "dependencies": {
+    "discord.js": "^12.5.1",
+    "dotenv": "^8.2.0",
+    "fs": "0.0.1-security",
+    "parse-ms": "^2.1.0",
+    "repeating": "^4.0.0",
+    "smartestchatbot": "^1.0.1"
+  }
+}

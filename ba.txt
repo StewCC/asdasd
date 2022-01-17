@@ -1,0 +1,32 @@
+let member = message.guild.members.cache.get(`${args[0]}`) || message.mentions.members.first(); 
+
+if(member === undefined){
+  return message.author.send('Mention/ID someone nob.')
+} else if(!args[1]){
+  message.author.send('Battle When?')
+}
+
+  let ClanMap = message.guild.roles.cache.find(role => role.name == `Battle ${args[1]}`);      
+
+  if(!ClanMap){
+    return await message.channel.send({embed: {
+      color: 'RED',
+      title: `Error #CantFindBattle**${args[1]}**`,
+      description: `I don't think Battle ${args[1]} exists.`,
+      timestamp: `${message.createdAt}`      
+    }})
+  }
+
+//check end
+member.roles.add(ClanMap).catch(console.error)
+
+  let Embed = new Discord.MessageEmbed()
+      .setDescription("Person turned into a Battle Member.")
+      .setColor("RANDOM")
+      .addField("Battle user", member.user.tag)
+      .addField('Role', ClanMap)
+      .addField("Done by", `<@${message.author.id}> with ID: ${message.author.id}`)
+      .addField("Set in", message.channel)
+      .addField("Set on", message.createdAt)
+
+message.channel.send(Embed);

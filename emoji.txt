@@ -1,0 +1,188 @@
+const Discord = require("discord.js");
+
+module.exports = {
+    info: {
+        name: "emoji",
+        description: "[ Staff Only ] change battle channel emojis.",
+        usage: "[BattleChannelNumber] [TYPE]",
+        aliases: []
+    },
+
+    run: async function(client, message, args){
+        //Command execute starts from here
+  message.delete();
+  if(!message.member.hasPermission("MANAGE_MESSAGES")) return message.channel.send("Insufficient Permissions"); 
+
+if(args[1] === 'lock' || args[1] === '🔒') {
+  let emoji =  `🔒`;
+
+if(args[0] === '1') {
+  let btc = client.channels.cache.get(`793763572605648910`);
+  btc.send('I have made this channel closed.')
+  return btc.setName(`battle-${args[0]}${emoji}`)
+}
+if(args[0] === '2') {
+  let btc = client.channels.cache.get(`793763572605648911`);
+  btc.send('I have made this channel closed.')
+  return btc.setName(`battle-${args[0]}${emoji}`)
+}
+if(args[0] === '3') {
+  let btc = client.channels.cache.get(`793763572605648912`);
+  btc.send('I have made this channel closed.')
+  return btc.setName(`battle-${args[0]}${emoji}`)
+}
+if(args[0] === '4') {
+  let btc = client.channels.cache.get(`793763572605648913`);
+  btc.send('I have made this channel closed.')
+  return btc.setName(`battle-${args[0]}${emoji}`)
+}
+if(args[0] === '4') {
+  let btc = client.channels.cache.get(`793763572605648913`);
+  btc.send('I have made this channel closed.')
+  return btc.setName(`battle-${args[0]}${emoji}`)
+}
+if(args[0] === '5') {
+  let btc = client.channels.cache.get(`793763572605648914`);
+  btc.send('I have made this channel closed.')
+  return btc.setName(`battle-${args[0]}${emoji}`)
+}
+if(args[0] === '6') {
+  let btc = client.channels.cache.get(`793763572605648915`);
+  btc.send('I have made this channel closed.')
+  return btc.setName(`battle-${args[0]}${emoji}`)
+}
+if(args[0] === '7') {
+  let btc = client.channels.cache.get(`793763572768571392`);
+  btc.send('I have made this channel closed.')
+  return btc.setName(`battle-${args[0]}${emoji}`)
+}
+if(args[0] === '8') {
+  let btc = client.channels.cache.get(`793763572768571394`);
+  btc.send('I have made this channel closed.')
+  return btc.setName(`battle-${args[0]}${emoji}`)
+}
+if(args[0] === '9') {
+  let btc = client.channels.cache.get(`793763572768571395`);
+  btc.send('I have made this channel closed.')
+  return btc.setName(`battle-${args[0]}${emoji}`)
+}
+if(args[0] === '10') {
+  let btc = client.channels.cache.get(`793763572768571396`);
+  btc.send('I have made this channel closed.')
+  return btc.setName(`battle-${args[0]}${emoji}`)
+}
+if(args[0] === '11') {
+  let btc = client.channels.cache.get(`793763572768571397`);
+  btc.send('I have made this channel closed.')
+  return btc.setName(`battle-${args[0]}${emoji}`)
+}
+if(args[0] === '12') {
+  let btc = client.channels.cache.get(`793763572768571398`);
+  btc.send('I have made this channel closed.')
+  return btc.setName(`battle-${args[0]}${emoji}`)
+}
+if(args[0] === '13') {
+  let btc = client.channels.cache.get(`793763572768571399`);
+  btc.send('I have made this channel closed.')
+  return btc.setName(`battle-${args[0]}${emoji}`)
+}
+if(args[0] === '14') {
+  let btc = client.channels.cache.get(`793763572768571400`);
+  btc.send('I have made this channel closed.')
+  return btc.setName(`battle-${args[0]}${emoji}`)
+}
+if(args[0] === '15') {
+  let btc = client.channels.cache.get(`793763572768571401`);
+  btc.send('I have made this channel closed.')
+  return btc.setName(`battle-${args[0]}${emoji}`)
+}
+
+} else if(args[1] === 'open' || args[1] === '✅') {
+
+  let emoji =  `✅`;
+
+if(args[0] === '1') {
+  let btc = client.channels.cache.get(`793763572605648910`);
+  btc.send('I have made this channel open.')
+  return btc.setName(`battle-${args[0]}${emoji}`)
+}
+if(args[0] === '2') {
+  let btc = client.channels.cache.get(`793763572605648911`);
+  btc.send('I have made this channel open.')
+  return btc.setName(`battle-${args[0]}${emoji}`)
+}
+if(args[0] === '3') {
+  let btc = client.channels.cache.get(`793763572605648912`);
+  btc.send('I have made this channel open.')
+  return btc.setName(`battle-${args[0]}${emoji}`)
+}
+if(args[0] === '4') {
+  let btc = client.channels.cache.get(`793763572605648913`);
+  btc.send('I have made this channel open.')
+  return btc.setName(`battle-${args[0]}${emoji}`)
+}
+if(args[0] === '4') {
+  let btc = client.channels.cache.get(`793763572605648913`);
+  btc.send('I have made this channel open.')
+  return btc.setName(`battle-${args[0]}${emoji}`)
+}
+if(args[0] === '5') {
+  let btc = client.channels.cache.get(`793763572605648914`);
+  btc.send('I have made this channel open.')
+  return btc.setName(`battle-${args[0]}${emoji}`)
+}
+if(args[0] === '6') {
+  let btc = client.channels.cache.get(`793763572605648915`);
+  btc.send('I have made this channel open.')
+  return btc.setName(`battle-${args[0]}${emoji}`)
+}
+if(args[0] === '7') {
+  let btc = client.channels.cache.get(`793763572768571392`);
+  btc.send('I have made this channel open.')
+  return btc.setName(`battle-${args[0]}${emoji}`)
+}
+if(args[0] === '8') {
+  let btc = client.channels.cache.get(`793763572768571394`);
+  btc.send('I have made this channel open.')
+  return btc.setName(`battle-${args[0]}${emoji}`)
+}
+if(args[0] === '9') {
+  let btc = client.channels.cache.get(`793763572768571395`);
+  btc.send('I have made this channel open.')
+  return btc.setName(`battle-${args[0]}${emoji}`)
+}
+if(args[0] === '10') {
+  let btc = client.channels.cache.get(`793763572768571396`);
+  btc.send('I have made this channel open.')
+  return btc.setName(`battle-${args[0]}${emoji}`)
+}
+if(args[0] === '11') {
+  let btc = client.channels.cache.get(`793763572768571397`);
+  btc.send('I have made this channel open.')
+  return btc.setName(`battle-${args[0]}${emoji}`)
+}
+if(args[0] === '12') {
+  let btc = client.channels.cache.get(`793763572768571398`);
+  btc.send('I have made this channel open.')
+  return btc.setName(`battle-${args[0]}${emoji}`)
+}
+if(args[0] === '13') {
+  let btc = client.channels.cache.get(`793763572768571399`);
+  btc.send('I have made this channel open.')
+  return btc.setName(`battle-${args[0]}${emoji}`)
+}
+if(args[0] === '14') {
+  let btc = client.channels.cache.get(`793763572768571400`);
+  btc.send('I have made this channel open.')
+  return btc.setName(`battle-${args[0]}${emoji}`)
+}
+if(args[0] === '15') {
+  let btc = client.channels.cache.get(`793763572768571401`);
+  btc.send('I have made this channel open.')
+  return btc.setName(`battle-${args[0]}${emoji}`)
+}
+
+}
+
+    }
+}
